@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#format is: ./portable_python3.3 place_of_environment
+#creates and deploys python environment
 pyvenv $1
 source $1/bin/activate
 
-#following two lines from
+#following two lines from http://stackoverflow.com/questions/18157494/python3-virtual-environment-and-pip
 curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
 rm setuptools-2.2.tar.gz 
