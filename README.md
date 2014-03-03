@@ -1,4 +1,4 @@
-A simple python script which creates a virtual python3.3 environment
+A simple python script which creates a virtual python3.3 environment with ipython3
 
 Installation and usage:
 
