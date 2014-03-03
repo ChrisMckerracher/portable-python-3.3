@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#format is: ./portable_python3.3 place_of_environment
+pyvenv $1
+source $1/bin/activate
+
+#following two lines from
+curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+rm setuptools-2.2.tar.gz 
+pip install ipython
+
+#get full directory of virtual environment
+cd $1; place=$(pwd)
+
+#bash and zsh integration
+
+current_shell=$(echo $SHELL)
+
+case $current_shell in
+
+/bin/zsh)
+    echo "alias $2='source $place/bin/activate'" >> ~/.zshrc
+
+;;
+
+/bin/bash)
+    echo "alias $2='source $place/bin/activate'" >> ~/.bashrc
+    
+;;
+
+esac
+
+#the alias will exist next shell session
