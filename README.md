@@ -1,6 +1,7 @@
 A simple python script which creates a virtual python3.3 environment
 
 Installation and usage:
+
 1) clone the repo
 2) cd into the repo
 3) chmod +x portable_python3.3
