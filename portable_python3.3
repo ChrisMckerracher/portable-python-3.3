@@ -14,18 +14,19 @@ pip install ipython
 cd $1; place=$(pwd)
 
 #bash and zsh integration
-
 current_shell=$(echo $SHELL)
 
 case $current_shell in
 
 /bin/zsh)
-    echo "alias $2='source $place/bin/activate'" >> ~/.zshrc
+
+echo "alias $2='source $place/bin/activate'" >> ~/.zshrc
 
 ;;
 
 /bin/bash)
-    echo "alias $2='source $place/bin/activate'" >> ~/.bashrc
+
+echo "alias $2='source $place/bin/activate'" >> ~/.bashrc
     
 ;;
 
