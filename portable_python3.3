@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #creates and deploys python environment
-pyvenv $1
+python3 -m venv $1 
 source $1/bin/activate
 
 #following two lines from http://stackoverflow.com/questions/18157494/python3-virtual-environment-and-pip
