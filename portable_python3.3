@@ -8,6 +8,7 @@ source $1/bin/activate
 curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
 rm setuptools-2.2.tar.gz 
+easy_install-3.3 pip
 pip install ipython
 
 #get full directory of virtual environment
